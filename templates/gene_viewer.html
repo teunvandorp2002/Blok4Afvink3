@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Genes</title>
+    <link type="text/css" href="/static/Style.css" rel="stylesheet">
+</head>
+<body>
+<h1>Human Genes</h1>
+<form action="" class="form-inline" method="post">
+    <label>
+        <input type="text" placeholder="Search in human genes" name="search" value="{{ request.form.search }}">
+    </label>
+    <input type="submit" value="Search" id="search_button">
+</form>
+<hr>
+{% if number == 1 %}
+    1 gene found
+{% elif number == 0 %}
+    No genes found
+{% else %}
+    {{ number }} genes found
+{% endif %}
+<hr>
+<p>
+    {% for gene in genes %}
+        <script type="text/javascript">
+            //sorry, dit script wilde niet werken in een apart file
+            var str = "{{ gene }}";
+            var substr = "{{ query }}";
+            if (substr.length !== 0){
+                var re = new RegExp(substr, "gi");
+                n_str = str.replace(re, '<b>' + substr + '</b>'); //makes substring bold
+            }
+            else {
+                n_str = str
+            }
+            document.write(n_str);
+        </script><br>
+    {% endfor %}
+</p>
+</body>
+</html>

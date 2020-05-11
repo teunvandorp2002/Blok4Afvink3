@@ -1,0 +1,17 @@
+body{
+    font-family: Arial, sans-serif;
+}
+hr{
+    height: 0.5mm;
+    border-color: #aaaaaa;
+    background-color: #aaaaaa;
+}
+p{
+    font-family: monospace;
+    font-size: 4mm;
+}
+
+input::placeholder{
+    color: #555555;
+    font-family: monospace;
+}
