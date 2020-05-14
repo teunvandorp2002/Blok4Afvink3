@@ -15,3 +15,6 @@ input::placeholder{
     color: #555555;
     font-family: monospace;
 }
+#searchBar{
+    width: 12cm;
+}

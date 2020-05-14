@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, json
+from flask import Flask, request, render_template
 import app_logic
 
 app = Flask(__name__)
