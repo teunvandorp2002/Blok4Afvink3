@@ -2,7 +2,6 @@ body{
     font-family: Arial, sans-serif;
 }
 hr{
-    height: 0.5mm;
     border-color: #aaaaaa;
     background-color: #aaaaaa;
 }
@@ -10,11 +9,22 @@ p{
     font-family: monospace;
     font-size: 4mm;
 }
-
+input{
+    border: 0.1mm solid #000;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
 input::placeholder{
     color: #555555;
-    font-family: monospace;
+    
 }
 #searchBar{
+    padding: 12px 10px;
     width: 12cm;
+    font-family: monospace;
+}
+#search_button{
+    width: 1.5cm;
+    padding: 12px 0;
+
 }
